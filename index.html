@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Registration</title>
+    <style>
+        body {
+            background-color: #333; /* Dark background */
+            color: #fff; /* Light text color */
+            font-family: Arial, sans-serif; /* Example font */
+            padding: 20px; /* Adding some padding for content */
+        }
+
+        a {
+            color: #fff; /* Link color */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #666;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            display: inline;
+            vertical-align: middle; /* Aligns the radio buttons properly */
+        }
+
+        input[type="radio"] + label {
+            display: inline;
+            vertical-align: middle; /* Aligns labels properly with radio buttons */
+            margin-right: 15px; /* Adds space between radio buttons and labels */
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #008cba;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <hr>
+    <a href="insecure.php">Insecure Login</a> ||
+    <a href="secure.php">Secure Login</a>
+    <h1>Badminton Registration!</h1>
+    <form method="post" action="register.php">
+        <label for="g">First Name</label>
+        <input type="text" name="fname" placeholder="Enter First Name" id="g" required>
+
+        <label for="h">Last Name</label>
+        <input type="text" name="lname" placeholder="Enter Last Name" id="h" required>
+
+        <h3>Select A Skill Level: </h3>
+        <div>
+            <input type="radio" id="g" name="skill_level" value="beginner" required>
+            <label for="g">Beginner</label>
+
+            <input type="radio" id="h" name="skill_level" value="intermediate" required>
+            <label for="h">Intermediate</label>
+
+            <input type="radio" id="i" name="skill_level" value="advanced" required>
+            <label for="i">Advanced</label>
+        </div>
+
+        <div>
+            <label for="a">Email</label>
+            <input name="email" type="email" id="a" required>
+
+            <label for="b">Phone</label>
+            <input name="phone" type="text" id="b" required>
+        </div>
+
+        <div>
+            <label for="age">Select Age Group</label>
+            <select name="age" id="age" required>
+                <option value="teen">18-30</option>
+                <option value="adult">30-50</option>
+                <option value="old">50-60</option>
+            </select>
+        </div>
+
+        <label for="pass">Password</label>
+        <input type="password" name="password" id="pass">
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
